@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(43, 43, 43);
+}
+
+/* это выдвижная понель */
+/* Оформление панели */
+#side-checkbox {
+  display: none;
+}
+.side-panel {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: -360px;
+  background: rgb(43, 43, 43);
+  transition: all 0.5s;   
+  width: 320px;
+  height: 100vh;
+  box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+  color: #FFF;
+  padding: 40px 20px;
+}
+.side-title {
+  margin-top: 15px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #BFE2FF;
+}
+/* Оформление кнопки на странице */
+.side-button-1 {
+  display: inline-block;
+}
+.side-button-1 .side-b {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px 14px;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase; 
+  font-family: 'Roboto', Тahoma, sans-serif;
+  background: rgba(0,0,0,0.4);
+  cursor: pointer; 
+  margin: 5px;
+}
+
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+  display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+  display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+  display: block;
+}
+#side-checkbox:checked + .side-panel {
+  left: 0;
+}
+/* Оформление кнопки на панеле */
+.side-button-2 {
+  font-size: 30px;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  color: #BFE2FF;    
+  transition: all 280ms ease-in-out;    
+}
+.side-button-2:hover {
+  transform: rotate(45deg) scale(1.1);    
+  color: #FFF;
+}
+
+.ShopTitle {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 40px;
+}
+
+.ShopTitle > span {
+  color: yellow;
+}
+
+.link-sidepanel {
+  text-decoration: none;
+  color: white;
+  /* background-color: aqua; */
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
+  transition: all 2s ease;
+}
+
+.link-sidepanel:hover{
+  background-color: gray;
+  transform: scale(1.1);
+}
+
+/* конец панели */
+/* профиль */
+
+.profile {
+  display: flex;
+  background-color: rgb(20, 20, 20);
+  padding: 10px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.image-profile {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition: all 2s ease;
+  cursor: pointer;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.image-profile:hover {
+  transform: scale(1.1);
+}
+
+.nickname {
+ padding: 10px;
+}
+
+.nickname2 {
+  margin-top: 8em;
+  margin-left: -8em;
+ }
+
+.balance {
+  margin-top: 45px;
+  margin-left: -160px;
+  color: yellow;
+}
+
+.balance2 {
+  color: yellow;
+  margin-top: 10em;
+  margin-left: -7em;
+}
+
+/* конец профиля */
+
+/* банера */
+
+.Banners {
+  color: white;
+  pointer-events: none;
+  margin-left: 18em;
+  display: flex;
+}
+
+.Banner1 > img {
+  height: 400px;
+  width: 600px;
+  border: 2px solid white;
+  border-radius: 40px;
+}
+
+.Banner2 > img {
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 40px;
+  margin-left: 2em;
+}
+
+.titleBanner {
+  margin-top: -100px;
+  margin-left: 480px;
+}
+
+.priceBanner {
+  font-size: 25px;
+  margin-left: 525px;
+  color: yellow;
+}
+
+/* обычные банера */
+
+.morebanners {
+  display: flex;
+}
+
+.FruitsBanner {
+  height: 150px;
+  width: 150px;
+  border: 4px solid black;
+  border-radius: 30px 30px 0 0;
+  margin-top: 100px;
+  display: flex;
+}
+
+.justFruit {
+  color: white;
+  margin-left: 100px;
+}
+
+.justFruit > h1 {
+  margin-top: -70px;
+  margin-left: 35px;
+}
+
+.justFruit > p {
+  margin-left: 50px;
+  margin-top: -10px;
+  font-size: 25px;
+  font-weight: 500;
+  color: yellow;
+}
+
+.justFruit > button {
+  height: 40px;
+  width: 158px;
+  margin-top: 3px;
+  background-color: grey;
+  border: 4px solid black;
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+
+.justFruit > button:hover {
+  background-color: rgb(88, 88, 88);
+}
+/* конец банера */
+
+/* начало топ фруктов */
+
+.container_fruits img {
+  width: 400px;
+  height: 300px;
+  pointer-events: none;
+}
+
+.top1 {
+  margin-left: 46em;
+}
+
+.top2 {
+  margin-left: 16em;
+  margin-top: -16em;
+}
+
+.top3 {
+  margin-left: 76em;
+  margin-top: -19em;
+}
+
+.fruit1 {
+  margin-top: -3em;
+  font-size: 40px;
+  margin-left: 3em;
+  font-weight: 500;
+  color: white;
+}
+
+.fruit2 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.top1y {
+  color: rgb(194, 194, 1);
+}
+
+.top2w {
+  color: silver;
+}
+
+.top3q {
+  color: rgb(255, 94, 0);
+}
+
+/* конец топ фруктов */
+
+
+.Warning {
+  margin-top: 10em;
+  height: 400px;
+  width: 500px;
+  background-color: rgb(43, 16, 16);
+  border: 4px solid red;
+  border-radius: 10px;
+  color: red;
+}
+
+.Warning > a > img {
+  height: 150px;
+  width: 150px;
+  margin-left: 340px;
+  margin-top: -30px;
+}
+
+.Warning > p {
+  font-size: 30px;
+}
+
+#red {
+  color: red;
+}
+
+.small {
+  height: 100px;
+  width: 100px;
+  margin-left: 50px;
+}
+
+.github {
+  height: 50px;
+  width: 50px;
+}
+
+.author {
+  margin-top: 29em;
+}
