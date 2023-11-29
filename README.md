@@ -1,4 +1,4 @@
-Это [Next.js](https://nextjs.org/)
+Это [Next.js](https://nextjs.org/) а также нужен [Node.js](https://nodejs.org/en/) там нужно скачать ```LTS``` версию
 
 ## Начало
 
